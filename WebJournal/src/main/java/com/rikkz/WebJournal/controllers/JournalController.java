@@ -46,7 +46,7 @@ public class JournalController {
         Optional<Post> post = postRepository.findById(id);
         ArrayList<Post> res = new ArrayList<>();
         post.ifPresent(res::add);
-        model.addAttribute("post", post);
+        model.addAttribute("post", res);
         return "blog-details";
     }
 
@@ -59,7 +59,7 @@ public class JournalController {
         Optional<Post> post = postRepository.findById(id);
         ArrayList<Post> res = new ArrayList<>();
         post.ifPresent(res::add);
-        model.addAttribute("post", post);
+        model.addAttribute("post", res);
         return "blog-edit";
     }
 
